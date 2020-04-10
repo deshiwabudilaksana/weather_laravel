@@ -22,7 +22,7 @@ class WeatherController extends Controller
 
     public function get_forecast(Request $request){
         //take forecast from openweather python weather.py
-        $forecast = shell_exec("C:/Users/USER/AppData/Local/Programs/Python/Python37-32/python ../py/weather.py $request->search");
+        $forecast = shell_exec("python ../py/weather.py $request->search");
         $city = $request->search;
         // echo $request->search;
         // echo $forecast;
